@@ -1,0 +1,68 @@
+
+<div
+  style="
+    height: 100vh;
+    width: 100vw;
+    background-color: #2d3436;
+    overflow: hidden;
+  "
+  class="d-flex justify-content-center align-items-center"
+>
+  <div
+    style="width: 500px; height: 400px; background-color: #fff"
+    class="d-flex justify-content-center"
+  >
+    <mat-tab-group style="width: 100%">
+      <mat-tab label="user">
+        <div class="d-flex justify-content-center mt-5">
+          <form #userForm="ngForm" (submit)="userSubmit(userForm.value)">
+            <div class="form-group">
+              <label for="exampleInputEmail1"> Adhar number</label>
+              <input
+                type="text"
+                ngModel
+                class="form-control"
+                name="Aadhar"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Aadhar number "
+              />
+            </div>
+
+            <input type="submit" class="btn btn-sm btn-primary" value="Enter" />
+          </form>
+        </div>
+      </mat-tab>
+      <mat-tab label="Admin">
+        <div class="d-flex justify-content-center mt-5">
+          <form #basicform="ngForm" (submit)="getData(basicform.value)">
+            <div class="form-group">
+              <label for="exampleInputEmail1"> User id</label>
+              <input
+                type="text"
+                ngModel
+                class="form-control"
+                name="adminId"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Aadhar number "
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input
+                type="password"
+                ngModel
+                class="form-control"
+                name="password"
+                id="exampleInputPassword1"
+                placeholder="Password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
